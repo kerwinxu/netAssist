@@ -185,17 +185,31 @@
          <string>发送设置</string>
         </property>
         <layout class="QGridLayout" name="gridLayout">
-         <item row="4" column="0">
-          <widget class="QCheckBox" name="Sendloop">
+         <item row="6" column="0" colspan="2">
+          <widget class="QPushButton" name="file_send_btn">
            <property name="text">
-            <string>周期发送</string>
+            <string>发送文件</string>
            </property>
           </widget>
          </item>
-         <item row="4" column="3">
+         <item row="4" column="0">
+          <widget class="QCheckBox" name="chk_send_after_receive">
+           <property name="text">
+            <string>收到数据后发送</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="3">
           <widget class="QLabel" name="ms_lbl">
            <property name="text">
             <string>ms</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QCheckBox" name="Sendloop">
+           <property name="text">
+            <string>周期发送</string>
            </property>
           </widget>
          </item>
@@ -213,10 +227,20 @@
            </property>
           </widget>
          </item>
-         <item row="5" column="0" colspan="2">
-          <widget class="QPushButton" name="file_send_btn">
+         <item row="0" column="0" colspan="2">
+          <widget class="QCheckBox" name="file_load">
            <property name="text">
-            <string>发送文件</string>
+            <string>载入文件</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="2">
+          <widget class="QLineEdit" name="loopinterval"/>
+         </item>
+         <item row="6" column="2" colspan="2">
+          <widget class="QPushButton" name="clr_btn2">
+           <property name="text">
+            <string>清空显示</string>
            </property>
           </widget>
          </item>
@@ -226,23 +250,6 @@
             <string>16进制发送</string>
            </property>
           </widget>
-         </item>
-         <item row="5" column="2" colspan="2">
-          <widget class="QPushButton" name="clr_btn2">
-           <property name="text">
-            <string>清空显示</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="0" colspan="2">
-          <widget class="QCheckBox" name="file_load">
-           <property name="text">
-            <string>载入文件</string>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="2">
-          <widget class="QLineEdit" name="loopinterval"/>
          </item>
         </layout>
        </widget>
@@ -397,7 +404,7 @@
      <x>0</x>
      <y>0</y>
      <width>821</width>
-     <height>26</height>
+     <height>23</height>
     </rect>
    </property>
   </widget>

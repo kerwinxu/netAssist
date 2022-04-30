@@ -176,6 +176,17 @@ class TcpLogic(Tcp_ucpUi):
                     self.rx_count += len(recv_msg)
                     self.statusbar_dict['rx'].setText(
                         '接收计数：%s' % self.rx_count)
+                    
+                    # 显示完毕后，要判断是否需要发送
+                    if self.chk_send_after_receive.isChecked():
+                        # 这里表示要发送了；实质上是调用发送按钮。
+                        if self.file_load.isChecked():
+                            self.file_send_t()      
+                        else:
+                            self.data_send_t()
+                            
+
+                        pass
 
                 else:
                     # 当前客户端连接主动关闭，但服务器socket并不关闭

@@ -2,11 +2,13 @@
 
 # Form implementation generated from reading ui file 'netAssitui.ui'
 #
-# Created by: PyQt5 UI code generator 5.11.3
+# Created by: PyQt5 UI code generator 5.12.3
 #
 # WARNING! All changes made in this file will be lost!
 
+
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 
 class Ui_NetAssist(object):
     def setupUi(self, NetAssist):
@@ -85,33 +87,36 @@ class Ui_NetAssist(object):
         self.SendSettings.setObjectName("SendSettings")
         self.gridLayout = QtWidgets.QGridLayout(self.SendSettings)
         self.gridLayout.setObjectName("gridLayout")
-        self.Sendloop = QtWidgets.QCheckBox(self.SendSettings)
-        self.Sendloop.setObjectName("Sendloop")
-        self.gridLayout.addWidget(self.Sendloop, 4, 0, 1, 1)
+        self.file_send_btn = QtWidgets.QPushButton(self.SendSettings)
+        self.file_send_btn.setObjectName("file_send_btn")
+        self.gridLayout.addWidget(self.file_send_btn, 6, 0, 1, 2)
+        self.chk_send_after_receive = QtWidgets.QCheckBox(self.SendSettings)
+        self.chk_send_after_receive.setObjectName("chk_send_after_receive")
+        self.gridLayout.addWidget(self.chk_send_after_receive, 4, 0, 1, 1)
         self.ms_lbl = QtWidgets.QLabel(self.SendSettings)
         self.ms_lbl.setObjectName("ms_lbl")
-        self.gridLayout.addWidget(self.ms_lbl, 4, 3, 1, 1)
+        self.gridLayout.addWidget(self.ms_lbl, 5, 3, 1, 1)
+        self.Sendloop = QtWidgets.QCheckBox(self.SendSettings)
+        self.Sendloop.setObjectName("Sendloop")
+        self.gridLayout.addWidget(self.Sendloop, 5, 0, 1, 1)
         self.Sendclear = QtWidgets.QCheckBox(self.SendSettings)
         self.Sendclear.setObjectName("Sendclear")
         self.gridLayout.addWidget(self.Sendclear, 2, 0, 1, 3)
         self.Sendcheck = QtWidgets.QCheckBox(self.SendSettings)
         self.Sendcheck.setObjectName("Sendcheck")
         self.gridLayout.addWidget(self.Sendcheck, 1, 0, 1, 3)
-        self.file_send_btn = QtWidgets.QPushButton(self.SendSettings)
-        self.file_send_btn.setObjectName("file_send_btn")
-        self.gridLayout.addWidget(self.file_send_btn, 5, 0, 1, 2)
-        self.hex_send = QtWidgets.QCheckBox(self.SendSettings)
-        self.hex_send.setObjectName("hex_send")
-        self.gridLayout.addWidget(self.hex_send, 3, 0, 1, 3)
-        self.clr_btn2 = QtWidgets.QPushButton(self.SendSettings)
-        self.clr_btn2.setObjectName("clr_btn2")
-        self.gridLayout.addWidget(self.clr_btn2, 5, 2, 1, 2)
         self.file_load = QtWidgets.QCheckBox(self.SendSettings)
         self.file_load.setObjectName("file_load")
         self.gridLayout.addWidget(self.file_load, 0, 0, 1, 2)
         self.loopinterval = QtWidgets.QLineEdit(self.SendSettings)
         self.loopinterval.setObjectName("loopinterval")
-        self.gridLayout.addWidget(self.loopinterval, 4, 2, 1, 1)
+        self.gridLayout.addWidget(self.loopinterval, 5, 2, 1, 1)
+        self.clr_btn2 = QtWidgets.QPushButton(self.SendSettings)
+        self.clr_btn2.setObjectName("clr_btn2")
+        self.gridLayout.addWidget(self.clr_btn2, 6, 2, 1, 2)
+        self.hex_send = QtWidgets.QCheckBox(self.SendSettings)
+        self.hex_send.setObjectName("hex_send")
+        self.gridLayout.addWidget(self.hex_send, 3, 0, 1, 3)
         self.gridLayout_9.addWidget(self.SendSettings, 2, 0, 1, 1)
         self.horizontalLayout_5.addLayout(self.gridLayout_9)
         self.gridLayout_10 = QtWidgets.QGridLayout()
@@ -201,7 +206,7 @@ class Ui_NetAssist(object):
         self.horizontalLayout_5.addLayout(self.gridLayout_10)
         NetAssist.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(NetAssist)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 821, 26))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 821, 23))
         self.menubar.setObjectName("menubar")
         NetAssist.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(NetAssist)
@@ -235,18 +240,18 @@ class Ui_NetAssist(object):
         self.open_btn.setText(_translate("NetAssist", "开始监听"))
         self.close_btn.setText(_translate("NetAssist", "断开"))
         self.SendSettings.setTitle(_translate("NetAssist", "发送设置"))
-        self.Sendloop.setText(_translate("NetAssist", "周期发送"))
+        self.file_send_btn.setText(_translate("NetAssist", "发送文件"))
+        self.chk_send_after_receive.setText(_translate("NetAssist", "收到数据后发送"))
         self.ms_lbl.setText(_translate("NetAssist", "ms"))
+        self.Sendloop.setText(_translate("NetAssist", "周期发送"))
         self.Sendclear.setText(_translate("NetAssist", "发送完自动清空"))
         self.Sendcheck.setText(_translate("NetAssist", "自动发送附加位"))
-        self.file_send_btn.setText(_translate("NetAssist", "发送文件"))
-        self.hex_send.setText(_translate("NetAssist", "16进制发送"))
-        self.clr_btn2.setText(_translate("NetAssist", "清空显示"))
         self.file_load.setText(_translate("NetAssist", "载入文件"))
+        self.clr_btn2.setText(_translate("NetAssist", "清空显示"))
+        self.hex_send.setText(_translate("NetAssist", "16进制发送"))
         self.Datarecv.setTitle(_translate("NetAssist", "网络数据接收"))
         self.clients_lbl.setText(_translate("NetAssist", "客户端:"))
         self.remoteip_lbl.setText(_translate("NetAssist", "远程IP"))
         self.remoteport_lbl.setText(_translate("NetAssist", "端口号"))
         self.Datasend.setTitle(_translate("NetAssist", "数据发送"))
         self.send_Btn.setText(_translate("NetAssist", "发送"))
-

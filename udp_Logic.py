@@ -78,6 +78,15 @@ class UdpLogic(Tcp_ucpUi):
                 self.rx_count += len(recv_msg)
                 self.statusbar_dict['rx'].setText('接收计数：%s' % self.rx_count)
 
+                # 这里判断是否需要发送信息
+                if self.chk_send_after_receive.isChecked():
+                    if self.file_load.isChecked():
+                        self.file_send_u()
+                    else:
+                        self.data_send_u()
+ 
+                        
+
     def socket_close_u(self):
         '''
         关闭udpsocket以及其相关线程
